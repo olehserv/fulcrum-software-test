@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Library.Core/Library.Core.csproj" />
+    <Project Path="src/Library.DataAccess.XML/Library.DataAccess.XML.csproj" />
+    <Project Path="src/Library.DataAccess/Library.DataAccess.csproj" />
+  </Folder>
+</Solution>

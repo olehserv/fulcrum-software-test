@@ -24,10 +24,16 @@ jobs:
 
       - name: Verify required files exist
         run: |
+          test -f .editorconfig
+          test -f .gitattributes
           test -f .gitignore
           test -f .releaserc.json
           test -f CONTRIBUTING.md
           test -f "CSharp home test task v2.pdf"
+          test -f Directory.Build.props
+          test -f Directory.Packages.props
+          test -f global.json
+          test -f Library.sln
           test -f LICENSE
           test -f README.md
           test -f SECURITY.md

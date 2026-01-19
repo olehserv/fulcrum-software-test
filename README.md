@@ -1,5 +1,8 @@
 # PET project by Oleh Shevtsiv
 
+> [!TIP]
+> 🖐️ *This repo inspired by first version: https://github.com/olehserv/oleh-shevtsiv-pet*
+
 ## 📌 Overview
 
 > ⚠️ **Disclaimer**  
