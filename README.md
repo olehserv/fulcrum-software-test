@@ -14,26 +14,45 @@
 ---
 
 ## 🛠 Tech Stack
-- opt 1
-- opt 2
-- opt 3
+- .Net 10
+- Github Actions
+- Nuget
+- XUnit
+- FluentAssertion
+- Moq
+- bash
 
 ---
 
 ## 🧱 Architecture & Design
-- opt 1
-- opt 2
-- opt 3
+- **File Management**
+    - Source abstraction & Physical source implementation
+    - File Formats abstraction & Xml format processor
+- **Models collectio**
+    - Book model
+- **BL: Management**
+    - Book Service for managing Books data 
+        - *load from file*
+        - *add to collection*
+        - *sort by author asc than by title asc*
+        - *find by title part*
+        - *save in file*
 
 ## 📂 Project Structure
 
 ```text
 src/
- ├── <Project>.Assembly1              # Assembly 1
- └── <Project>.Assembly2              # Assembly 2
-tests/
- ├── <Project>.UnitTests              # Unit tests
- └── <Project>.IntegrationTests       # Integration tests
+ ├── Library.File.Core  
+ ├── Library.File.Format.Xml 
+ ├── Library.File.Source.Physical 
+ ├── LLibrary.Management             
+ └── Library.Models              
+test/
+ ├── test.Common 
+ ├── test.Library.File.Core
+ ├── test.Library.File.Format.Xml
+ ├── test.Library.File.Source.Physical           
+ └── test.Library.Management      
 ```
 
 ---
@@ -53,13 +72,11 @@ tests/
 ## 🚀 Getting Started
 
 ### 🧰 Prerequisites
-- opt 1
-- opt 2
-- opt 3
+- .Net 10
 
 ### 🧪 Testing
 ```bash
-<command to run unit tests>
+dotnet test {path to slnx file}
 ```
 
 ---
