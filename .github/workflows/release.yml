@@ -31,16 +31,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "npm"
+
+      - name: Install semantic-release deps
+        run: |
+          if [ ! -f package.json ]; then npm init -y; fi
+          npm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/github conventional-changelog-conventionalcommits
 
       - name: Run semantic-release
-        run: >
-          npx \
-          -p semantic-release \
-          -p @semantic-release/commit-analyzer \
-          -p @semantic-release/release-notes-generator \
-          -p @semantic-release/github \
-          -p conventional-changelog-conventionalcommits \
-          semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
           GH_TOKEN: ${{ secrets.REPO_PAT }}
+        run: npx semantic-release
