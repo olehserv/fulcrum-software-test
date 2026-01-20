@@ -18,4 +18,18 @@
     <MinVerTagPrefix>v</MinVerTagPrefix>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
   </PropertyGroup>
+
+  <ItemGroup Condition="'$(IsTestProject)' != 'true'">
+    <PackageReference  Include="Microsoft.SourceLink.GitHub" />
+    <PackageReference  Include="MinVer" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(IsTestProject)' == 'true'">
+    <PackageReference  Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference  Include="xunit" />
+    <PackageReference  Include="xunit.runner.visualstudio" />
+    <PackageReference  Include="coverlet.collector" >
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 </Project>
