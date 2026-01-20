@@ -6,4 +6,10 @@
     <Project Path="src/Library.File.Source.Physical/Library.File.Source.Physical.csproj" />
     <Project Path="src/Library.Management/Library.Management.csproj" />
   </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/test.Library.File.Core/test.Library.File.Core.csproj" />
+    <Project Path="test/test.Library.File.Format.Xml/test.Library.File.Format.Xml.csproj" />
+    <Project Path="test/test.Library.File.Source.Physical/test.Library.File.Source.Physical.csproj" />
+    <Project Path="test/test.Library.Management/test.Library.Management.csproj" />
+  </Folder>
 </Solution>
